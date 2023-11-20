@@ -1,9 +1,11 @@
+package sorting;
+
 public class QuickSort {
     public static void quickSort(int[] arr,int low,int high){
         if (low<high){
-            int pivot = partition(arr,low,high);
-            quickSort(arr,low,pivot-1);
-            quickSort(arr,pivot+1,high);
+            int pi = partition(arr,low,high);
+            quickSort(arr,low,pi-1);
+            quickSort(arr,pi+1,high);
         }
     }
 
@@ -23,16 +25,11 @@ public class QuickSort {
         arr[high] = temp;
         return i+1;
     }
+
     public static void main(String[] args) {
-        int[] array = {3,1,2,6,9,8,5};
-        System.out.println("before sorting: ");
-        for(int num: array){
-            System.out.print(num + " ");
-        }
-        System.out.println();
-        quickSort(array,0,array.length-1);
-        System.out.println("after sorting is: ");
-        for (int num:array){
+        int arr[] = {8,4,9,7,6,3,2,1};
+        quickSort(arr,0,arr.length-1 );
+        for (int num:arr){
             System.out.print(num + " ");
         }
     }

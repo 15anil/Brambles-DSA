@@ -1,7 +1,9 @@
+package sorting;
+
 import java.util.Arrays;
 
 public class MergeSort {
-    public static void mergeSort(int arr[]){
+    public static void mergeSort(int arr[] ){
         if (arr == null || arr.length<=1){
             return;
         }
